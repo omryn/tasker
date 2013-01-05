@@ -1,0 +1,17 @@
+doctype
+html
+    body
+        if item
+            div
+                span Name:
+                span=item.name
+                span Color:
+                span=item.color
+            a(href="/developers/"+item.name+"/edit") Edit developer details
+        else
+            div
+                span Shit.. there is no
+                span=' '
+                    strong= id
+        div
+            a(href="/developers") Developers index

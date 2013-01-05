@@ -1,0 +1,10 @@
+doctype
+html
+    body
+        form(action="/developers", method="POST")
+            label Name
+                input(name="name")
+            label Color
+                input(name="color")
+            input(type="hidden", name="redirect", value="true")
+            input(type="submit")

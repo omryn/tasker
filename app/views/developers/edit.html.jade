@@ -1,0 +1,20 @@
+doctype
+html
+    body
+        if item
+            form(action="/developers/"+item.name, method="post")
+                label Name
+                    input(name="name", value=item.name)
+                label Color
+                    input(name="color", value=item.color)
+                input(type="hidden", name="_id", value=item._id)
+                input(type="hidden", name="redirect", value="true")
+                input(type="hidden", name="_method", value="put")
+                input(type="submit")
+        else
+            p
+                span Shit.. there is no
+                span=' '
+                    strong= id
+            a(href="/developers") Developers index
+            a(href="/developers/new") Create a new developer
